@@ -5,7 +5,7 @@
 import { getByTestId, getByRole } from "@testing-library/dom";
 import "@testing-library/jest-dom";
 
-import { App } from "../src/app";
+import { App } from"../src/app";
 
 describe("button and counter", () => {
   let container = App();
@@ -35,7 +35,7 @@ describe("button and counter", () => {
     expect(getByTestId(container, "counter")).toHaveTextContent(/^2$/);
   });
 
-  describe.skip("decrement button", () => {
+  describe.unskip("decrement button", () => {
     test("pressing Decrement decreases the counter", () => {
       const button = getByRole(container, "button", {
         name: "Decrement",
